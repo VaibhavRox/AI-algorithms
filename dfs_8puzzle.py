@@ -84,17 +84,7 @@ if __name__ == "__main__":
         print("\n✅ Solution found!")
         print("Number of moves:", len(solution))
         print("Moves:", solution)
-
-        # Step-by-step visualization
-        current = [row[:] for row in start_state]
-        print("\n🔄 Step-by-step states:\n")
-        print_state(current)
-        for move in solution:
-            for neighbor, m in get_neighbors(current):
-                if m == move:
-                    current = neighbor
-                    break
-            print(f"Move: {move}")
-            print_state(current)
+        print("\n🏁 Goal state:")
+        print_state(goal_state)
     else:
         print("\n❌ No solution found (try increasing depth or check solvability).")
